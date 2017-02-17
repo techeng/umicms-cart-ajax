@@ -22,7 +22,7 @@
 		<xsl:apply-templates select="document(concat( 'upage://', page/@id ))/udata//group[@name='price-param']" mode="order-objects"/>
 		<td>
 				<input type="number" value="{amount}" min="{$minnum}" step="{$minnum}" data-unit="{$priceunit}" data-price="{price}" />
-				<a class="delitem" title="удалить" href="{$lang-prefix}/emarket/basket/remove/item/{@id}/" id="delete_{@id}" />
+				<a class="delitem" id="{page/@id}" href="{$lang-prefix}/emarket/basket/remove/item/{@id}" title="удалить" />
 		</td>
 		<!--xsl:call-template name="item-price-order">
       <xsl:with-param name="item-amount" select="amount"/>
